@@ -99,6 +99,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tag" id="qv5-U4-hvM">
                         <barButtonItem key="backBarButtonItem" title="Volver" id="XFt-IH-iow"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VPd-np-kRk">
+                            <connections>
+                                <action selector="addNewNote:" destination="em0-nO-zXP" id="eFi-Ny-t5N"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGH-I4-lb6" userLabel="First Responder" sceneMemberID="firstResponder"/>

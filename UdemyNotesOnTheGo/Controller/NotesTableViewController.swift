@@ -9,9 +9,8 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
-
     
-    let notesArray = ["Compra1", "Compra2", "Compra3"];
+    var notesArray = [String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,5 +106,34 @@ class NotesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK: - Añadir nuevos items a la tabla
+    
+    
+    @IBAction func addNewNote(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField();
+        
+        let controller = UIAlertController(title: "Añadir nueva nota", message: "", preferredStyle: UIAlertController.Style.alert);
+        
+        let addAction = UIAlertAction(title: "Añadir item", style: UIAlertAction.Style.default) { (action) in
+            //TODO: Recuperar lo que haya escrito el usuario cuando pulsa el boton añadir
+            
+            self.notesArray.append(textField.text!);
+            self.tableView.reloadData();
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil);
+        
+        controller.addAction(addAction);
+        controller.addAction(cancelAction);
+        
+        controller.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Escribe aqui tu nota";
+            
+            textField = alertTextField;
+        }
+        
+        present(controller, animated: true, completion: nil);
+    }
 }
