@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j4I-Tv-TMm">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes on the Go-->
+        <scene sceneID="1mL-l8-lvD">
+            <objects>
+                <collectionViewController id="e6j-wd-WaF" customClass="CategoriesViewController" customModule="UdemyNotesOnTheGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sxX-bA-TMc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XkN-ts-Uug">
+                            <size key="itemSize" width="141" height="174"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="qW7-eU-6gQ" customClass="CategoryCollectionViewCell" customModule="UdemyNotesOnTheGo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="141" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="174"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C28-lY-F0G">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="141"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="C28-lY-F0G" secondAttribute="height" multiplier="1:1" id="aby-PE-6X6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Iec-wH-nzf">
+                                            <rect key="frame" x="0.0" y="141" width="141" height="33"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="C28-lY-F0G" firstAttribute="top" secondItem="qW7-eU-6gQ" secondAttribute="top" id="9Dx-RP-QGW"/>
+                                    <constraint firstItem="Iec-wH-nzf" firstAttribute="leading" secondItem="qW7-eU-6gQ" secondAttribute="leading" id="Bkf-7G-Erj"/>
+                                    <constraint firstItem="Iec-wH-nzf" firstAttribute="top" secondItem="C28-lY-F0G" secondAttribute="bottom" id="S1j-62-bSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="C28-lY-F0G" secondAttribute="trailing" id="Wvc-5j-iEC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iec-wH-nzf" secondAttribute="trailing" id="a67-OJ-nn1"/>
+                                    <constraint firstItem="C28-lY-F0G" firstAttribute="leading" secondItem="qW7-eU-6gQ" secondAttribute="leading" id="s2P-Sf-0EI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iec-wH-nzf" secondAttribute="bottom" id="upo-QO-hjL"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="categoryImageView" destination="C28-lY-F0G" id="40e-yc-nVn"/>
+                                    <outlet property="categoryLabel" destination="Iec-wH-nzf" id="uTS-3n-ugi"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="e6j-wd-WaF" id="4b1-rI-DT0"/>
+                            <outlet property="delegate" destination="e6j-wd-WaF" id="Z95-ev-Gh7"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Notes on the Go" id="9mL-QH-mBp"/>
+                    <connections>
+                        <segue destination="em0-nO-zXP" kind="show" identifier="ShowNoteList" id="TOf-ls-Wb3"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Anp-lp-NsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562.39999999999998" y="-8.1280788177339911"/>
+        </scene>
+        <!--Tag-->
+        <scene sceneID="q1a-6f-5Ri">
+            <objects>
+                <tableViewController id="em0-nO-zXP" customClass="NotesTableViewController" customModule="UdemyNotesOnTheGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FPm-dx-gRf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="99" id="mSu-X7-sTv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mSu-X7-sTv" id="mDb-IH-Jbm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="98.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="em0-nO-zXP" id="pTF-aD-6cF"/>
+                            <outlet property="delegate" destination="em0-nO-zXP" id="qxl-1H-LKa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tag" id="qv5-U4-hvM">
+                        <barButtonItem key="backBarButtonItem" title="Volver" id="XFt-IH-iow"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGH-I4-lb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607.2" y="-8.1280788177339911"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bRD-nu-7kX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j4I-Tv-TMm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hZG-KI-0OV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e6j-wd-WaF" kind="relationship" relationship="rootViewController" id="nrm-HO-dDh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3Q-ux-x4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-8.1280788177339911"/>
+        </scene>
+    </scenes>
+</document>
