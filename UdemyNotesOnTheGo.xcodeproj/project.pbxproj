@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69450B8021A1AC3300DCD7BE /* NotesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69450B7E21A1AC3300DCD7BE /* NotesDataModel.xcdatamodeld */; };
 		69AEFC7921A0303600926EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEFC7821A0303600926EB1 /* AppDelegate.swift */; };
 		69AEFC7B21A0303600926EB1 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEFC7A21A0303600926EB1 /* CategoriesViewController.swift */; };
 		69AEFC7E21A0303600926EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AEFC7C21A0303600926EB1 /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		69AEFC8321A0303700926EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AEFC8121A0303700926EB1 /* LaunchScreen.storyboard */; };
 		69AEFC8F21A0340200926EB1 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEFC8E21A0340200926EB1 /* NotesTableViewController.swift */; };
 		69AEFC9121A0387200926EB1 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEFC9021A0387200926EB1 /* CategoryCollectionViewCell.swift */; };
+		69E9B39421A39A71002D5143 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9B39321A39A71002D5143 /* extensions.swift */; };
+		69E9B39621A39F44002D5143 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9B39521A39F44002D5143 /* Category.swift */; };
+		69E9B39821A4F365002D5143 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9B39721A4F365002D5143 /* NewCategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69450B7F21A1AC3300DCD7BE /* NotesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		69AEFC7521A0303600926EB1 /* UdemyNotesOnTheGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyNotesOnTheGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AEFC7821A0303600926EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AEFC7A21A0303600926EB1 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		69AEFC8421A0303700926EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69AEFC8E21A0340200926EB1 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		69AEFC9021A0387200926EB1 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		69E9B39321A39A71002D5143 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		69E9B39521A39F44002D5143 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		69E9B39721A4F365002D5143 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				69AEFC7821A0303600926EB1 /* AppDelegate.swift */,
 				69AEFC7A21A0303600926EB1 /* CategoriesViewController.swift */,
 				69AEFC8E21A0340200926EB1 /* NotesTableViewController.swift */,
+				69E9B39721A4F365002D5143 /* NewCategoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -79,6 +88,9 @@
 		69AEFC8B21A0305300926EB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69450B7E21A1AC3300DCD7BE /* NotesDataModel.xcdatamodeld */,
+				69E9B39321A39A71002D5143 /* extensions.swift */,
+				69E9B39521A39F44002D5143 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,10 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69450B8021A1AC3300DCD7BE /* NotesDataModel.xcdatamodeld in Sources */,
+				69E9B39821A4F365002D5143 /* NewCategoryViewController.swift in Sources */,
 				69AEFC9121A0387200926EB1 /* CategoryCollectionViewCell.swift in Sources */,
 				69AEFC7B21A0303600926EB1 /* CategoriesViewController.swift in Sources */,
 				69AEFC7921A0303600926EB1 /* AppDelegate.swift in Sources */,
 				69AEFC8F21A0340200926EB1 /* NotesTableViewController.swift in Sources */,
+				69E9B39421A39A71002D5143 /* extensions.swift in Sources */,
+				69E9B39621A39F44002D5143 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69450B7E21A1AC3300DCD7BE /* NotesDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69450B7F21A1AC3300DCD7BE /* NotesDataModel.xcdatamodel */,
+			);
+			currentVersion = 69450B7F21A1AC3300DCD7BE /* NotesDataModel.xcdatamodel */;
+			path = NotesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 69AEFC6D21A0303600926EB1 /* Project object */;
 }
